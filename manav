@@ -1,0 +1,50 @@
+'''Müşteri manava gidiyor. Manavda sadece muz, elma ve üzüm var. 
+Manav, Müşteri’e hangi meyveden istediğini sorar.
+Müşteri eğer muz isterse; 
+kaç kilo istediğini sorar ve kilosu 5tl olarak ödeyeceği ücreti hesaplayarak Müşteri’e söyler.
+Müşteri eğer elma isterse; 
+hangi renk elma istediğini sorar ve Müşteri kırmızı, sarı veya yeşil elma istediğini söyler. 
+Manav kaç kilo istediğini sorar ve kilosu 2tl olarak ödeyeceği ücreti hesaplayıp Müşteri’e söyler.
+Müşteri eğer üzüm isterse; 
+mor veya yeşil olan üzümü seçer ve 
+mor üzüm için kilosu 3tl olarak ücret öder. 
+Eğer yeşil üzüm seçerse, kilosuna 3.5tl ödeyecektir. 
+Manav istediği üzümü sorar ve kaç kilo istiyorsa hesaplayıp ücreti söyler.
+Müşteri’in manav alışverişinin kodları nasıl olmalıdır?'''
+
+print("Hoşgeldiniz ne istersiniz?")
+cevap="evet"
+while cevap=="evet":
+    meyve=input() 
+    if meyve == "muz":
+        print("kaç kilo istiyorsun?")
+        kg1=int(input())
+        ucret1=(kg1*5)
+        print("{} kilo muz {}tl".format(kg1,ucret1))
+    elif meyve =="elma":
+        print("hangi renk elma olsun?")
+        elmarenk=input()
+        if elmarenk=="kırmızı" or "sarı" or "yeşil":
+            print("kaç kilo olsun?")
+            kg2=int(input())
+            ucret2=(kg2*2)
+            print("{} kilo {} elma {} tl".format(kg2,elmarenk,ucret2))
+    elif meyve =="üzüm":
+        print("hangi renk üzümden istiyorsun")
+        uzumrenk=input()
+        if uzumrenk == "mor":
+            print("kaç kilo istiyorsun")
+            kgm=int(input())
+            ucretm=(kgm*3)
+            print("{} kilo mor üzüm {} tl".format(kgm,ucretm))
+        elif uzumrenk == "yeşil":
+            print("kaç kilo istiyorsun")
+            kgy=int(input())
+            ucrety=(kgy*3.5)
+            print("{} kilo mor üzüm {} tl".format(kgy,ucrety))
+    else:
+        print("ondan kalmadı maalesef")
+    print("başka birşey istiyor musun?")
+    cevap=input()
+    
+print("ödemeyi kasada yapabilirsiniz, iyi günler yine bekleriz")
